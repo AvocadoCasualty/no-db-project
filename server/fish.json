@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "item": "Danios",
+    "img": "https://www.aquatic2000.com/wp-content/uploads/2018/09/DaniosBlog.jpg"
+  },
+  {
+    "id": 2,
+    "item": "Tetras",
+    "img": "https://www.aquatic2000.com/wp-content/uploads/2018/09/TetrasBlog.jpg"
+  },
+  {
+    "id": 3,
+    "item": "Platies",
+    "img": "https://www.aquatic2000.com/wp-content/uploads/2018/09/PlatiesBlog2.jpg"
+  },
+  {
+    "id": 4,
+    "item": "Swordtails",
+    "img": "https://www.aquatic2000.com/wp-content/uploads/2018/09/SwordtailsBlog.jpg"
+  },
+  {
+    "id": 5,
+    "item": "Catfish",
+    "img": "https://www.aquatic2000.com/wp-content/uploads/2018/09/CatfishBlog.jpg"
+  }
+]
