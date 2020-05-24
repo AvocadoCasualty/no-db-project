@@ -25,6 +25,7 @@ class Fish extends Component{
                     <div key={e.id}>
                     <div className='each-fish'>{e.item} </div>
                         <img className="fishpics" src={e.img}/>
+                        <br/>
                         <button className='fish-btn' onClick={()=>this.props.addFishToList(e.item, 1)}>Add Fish!</button>
                     </div>
                 )})}

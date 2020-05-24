@@ -23,11 +23,11 @@ class Items extends Component {
         return (
             <div className='items'>
                 <div>
-                    <button onClick={() => fishChangeQty(id, qty + 1)}>+</button>
-                    <button onClick={() => fishChangeQty(id, qty - 1)}>-</button>
-                    <div> {item} {qty} </div>
+                    <div> {item} - Qty: {qty} </div>
+                    <button className='qty-down-btn' onClick={() => fishChangeQty(id, qty - 1)}>-</button>
+                    <button className='qty-up-btn' onClick={() => fishChangeQty(id, qty + 1)}>+</button>
                     {/*<button>Edit</button>*/}
-                    <button onClick={() => purchasedItem(id)}>Got it!</button>
+                    <button className="gotitbtn" onClick={() => purchasedItem(id)}>Got it!</button>
                 </div>
             </div>
         )

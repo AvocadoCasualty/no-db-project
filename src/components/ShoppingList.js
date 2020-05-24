@@ -11,7 +11,7 @@ function ShoppingList({shoppingList, purchasedItem, fishChangeQty, clearShopping
                 purchasedItem={purchasedItem}
                 fishChangeQty={fishChangeQty}
             />)})}
-            <button onClick={() => clearShoppingList()}>Clear Shopping List Changes!</button>
+            <button className='clearbtn' onClick={() => clearShoppingList()}>Clear Shopping List Changes</button>
         </div>
     )
 

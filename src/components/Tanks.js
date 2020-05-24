@@ -22,8 +22,9 @@ class Tanks extends Component{
             <div className='tanks'>
                 {this.state.tanks.map(({id, item, img}) => {return (
                     <div key={id}>
-                        <div> {item}</div>
+                        <div className='tankname'> {item}</div>
                         <img className='tankpics' src={img}/>
+                        <br/>
                         <button className="tankbtn" onClick={()=>this.props.addTankToList(item, 1)}>This Tank!</button>
                     </div>
                 )})}
