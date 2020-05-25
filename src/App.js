@@ -31,11 +31,15 @@ class App extends Component {
     }
 
     addFishToList(item, qty) {
-        axios.post('/api/shoppinglist', {item, qty}).then((res) => {
+        axios.post('/api/shoppinglist', {item, qty}).then((res) => { alert("Added to your Shopping List!")
             this.setState({
                 shoppingList: res.data
             })
         }).catch(error => console.log(error))
+    }
+
+    isInList(item) {
+
     }
 
     fishQtyChange(id, qty) {
@@ -48,11 +52,14 @@ class App extends Component {
     }
 
     addTankToList(item, qty) {
-        axios.post('/api/shoppinglist', {item, qty}).then((res) => {
+        axios.post('/api/shoppinglist', {item, qty}).then((res) => { alert("Added to your Shopping List!")
             this.setState({
                 shoppingList: res.data
             })
-        }).catch(error => console.log(error))
+        }).catch(error =>
+        { alert("Aww fishsticks! Something went wrong, please try again!")
+            console.log(error)
+        })
 
     }
 

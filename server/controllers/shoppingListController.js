@@ -1,4 +1,4 @@
-const shoppingList = [
+let shoppingList = [
     {id: 0, item: "Dechlorinator", qty: 1},
     {id: 1, item: "Substrate", qty: 1},
     {id: 2, item: "Decorations", qty: 5},
@@ -13,6 +13,12 @@ module.exports = {
 
     pushSelectionToList: (req, res) => {
         const {item, qty} = req.body
+
+        for(let i =0; i < shoppingList.length; i++) {
+            if(item === shoppingList[i].item ){
+                shoppingList[i].qty ++
+            return res.status(200).send(shoppingList)}
+        }
 
         const newItem = {id, item, qty}
 
@@ -45,7 +51,12 @@ module.exports = {
         if (index === -1) {
             return res.status(404).send('Item not Found')
         }
-        shoppingList[index].qty = qty
+        if (qty <= 0 ){
+            shoppingList.splice(index,1)
+        } else {
+            shoppingList[index].qty = qty
+        }
+
         res.status(200).send(shoppingList)
     },
 
@@ -61,7 +72,12 @@ module.exports = {
         res.status(200).send(shoppingList)
     },
     clearList: (req, res) => {
-        shoppingList.splice(4)
+        shoppingList = [
+            {id: 0, item: "Dechlorinator", qty: 1},
+            {id: 1, item: "Substrate", qty: 1},
+            {id: 2, item: "Decorations", qty: 5},
+            {id: 3, item: "Freshwater Test Kit", qty: 1},
+        ]
         res.status(200).send(shoppingList)
     }
 }
